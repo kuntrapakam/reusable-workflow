@@ -14,3 +14,5 @@ jobs:
         uses: kuntrapakam/reusable-workflow/.github/actions/nestjs@main
       - name: upload artifacts workflow
         uses: kuntrapakam/reusable-workflow/.github/actions/upload-artifacts@main
+      - name: download artifacts workflow
+        uses: kuntrapakam/reusable-workflow/.github/actions/download-artifacts@main

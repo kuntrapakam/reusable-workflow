@@ -1,0 +1,8 @@
+name: download artifacts workflow
+description: download artifacts workflow
+runs:
+  using: "composite"
+  steps:
+  - uses: actions/download-artifact@v4
+    with:
+      name: my-artifact
