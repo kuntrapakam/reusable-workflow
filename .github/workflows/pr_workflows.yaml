@@ -6,9 +6,6 @@ on:
         required: true
         description: git token
   workflow_dispatch:
-  push:
-    branches:
-      - main
 env:
   GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
 permissions: write-all
