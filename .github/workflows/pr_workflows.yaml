@@ -1,0 +1,12 @@
+name: serverless pr workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: create pull request
+        uses: github.com/kuntrapakam/reusable-workflow/actions/serverless@main
