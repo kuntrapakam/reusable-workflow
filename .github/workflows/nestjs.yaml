@@ -1,4 +1,4 @@
-name: serverless pr workflow
+name: nestjs workflow
 on:
   workflow_call:
   workflow_dispatch:
@@ -6,9 +6,11 @@ env:
   GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
 permissions: write-all
 jobs:
-  create_pull_request:
+  nestjs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: create pull request
+      - name: reusable nestjs workflow
         uses: kuntrapakam/reusable-workflow/.github/actions/nestjs@main
+      - name: upload artifacts workflow
+        uses: kuntrapakam/reusable-workflow/.github/actions/upload-artifacts@main
