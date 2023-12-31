@@ -1,6 +1,7 @@
 name: serverless pr workflow
 on:
   workflow_call:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -11,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: create pull request
-        uses: ./actions/serverless
+        uses: ./.github/actions/serverless
