@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: create pull request
-        uses: ./.github/actions/serverless
+        uses: ./.github/actions/serverless@main
