@@ -7,11 +7,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    # Make changes to pull request here
-
-    - name: Create Pull Request
-      uses: vsoch/pull-request-action@master
+    # action-semantic-pull-request
+    - uses: amannn/action-semantic-pull-request@v5
       env:
-        GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}
-        BRANCH_PREFIX: "update/"
-        PULL_REQUEST_BRANCH: "main"
+        GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
