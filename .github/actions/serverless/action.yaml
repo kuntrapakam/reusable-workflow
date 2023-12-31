@@ -3,7 +3,7 @@ description: serverless pr workflow
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v4
+    # - uses: actions/checkout@v4
 
     # Make changes to pull request here
 
