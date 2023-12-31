@@ -1,10 +1,6 @@
 name: serverless pr workflow
 on:
   workflow_call:
-    secrets:
-      GIT_TOKEN:
-        required: true
-        description: git token
   workflow_dispatch:
 env:
   GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
@@ -15,6 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: create pull request
-        uses: kuntrapakam/reusable-workflow/.github/actions/serverless@main
-        with:
-          GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
+        uses: kuntrapakam/reusable-workflow/.github/actions/nestjs@main
