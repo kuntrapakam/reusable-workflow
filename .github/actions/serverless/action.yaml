@@ -13,3 +13,5 @@ runs:
       uses: vsoch/pull-request-action@master
       env:
         GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}
+        BRANCH_PREFIX: "update/"
+        PULL_REQUEST_BRANCH: "main"
