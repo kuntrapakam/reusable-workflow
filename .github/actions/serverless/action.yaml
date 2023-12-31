@@ -15,3 +15,4 @@ runs:
         GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}
         BRANCH_PREFIX: "update/"
         PULL_REQUEST_BRANCH: "main"
+        PULL_REQUEST_FROM_BRANCH: "main"
