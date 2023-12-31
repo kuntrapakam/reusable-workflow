@@ -1,6 +1,11 @@
 name: serverless pr workflow
 on:
   workflow_call:
+    inputs:
+      GITHUB_TOKEN:
+        required: true
+        type: string
+        description: git token
   workflow_dispatch:
   push:
     branches:
@@ -14,4 +19,4 @@ jobs:
       - name: create pull request
         uses: kuntrapakam/reusable-workflow/.github/actions/serverless@main
         env:
-          GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
+          GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}

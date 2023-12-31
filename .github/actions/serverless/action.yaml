@@ -1,5 +1,9 @@
 name: serverless pr workflow
 description: serverless pr workflow
+inputs:
+  GITHUB_TOKEN:
+    required: true
+    description: git token
 runs:
   using: "composite"
   steps:
@@ -7,3 +11,5 @@ runs:
 
     - name: Create Pull Request
       uses: vsoch/pull-request-action@master
+      env:
+        GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}
