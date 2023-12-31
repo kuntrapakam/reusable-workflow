@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: create pull request
         uses: kuntrapakam/reusable-workflow/.github/actions/serverless@main
+        env:
+          GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
