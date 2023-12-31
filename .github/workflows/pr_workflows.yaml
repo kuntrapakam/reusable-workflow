@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: create pull request
-        uses: https://github.com/kuntrapakam/reusable-workflow/actions/serverless@main
+        uses: ./actions/serverless@main
