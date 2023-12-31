@@ -1,5 +1,6 @@
 name: serverless pr workflow
 on:
+  workflow_call:
   push:
     branches:
       - main
