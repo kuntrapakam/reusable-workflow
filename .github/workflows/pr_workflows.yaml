@@ -2,7 +2,7 @@ name: serverless pr workflow
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
+      GIT_TOKEN:
         required: true
         description: git token
   workflow_dispatch:
@@ -20,4 +20,4 @@ jobs:
       - name: create pull request
         uses: kuntrapakam/reusable-workflow/.github/actions/serverless@main
         with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
